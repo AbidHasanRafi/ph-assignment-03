@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +16,23 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/eb45968083.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom classes -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "hockey-primary": "#FF4240",
+            },
+          },
+        },
+      };
+    </script>
     <style>
       body {
         font-family: "Manrope", sans-serif;
@@ -24,7 +41,145 @@
     </style>
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav class="mx-6">
+        <div class="navbar bg-base-100 my-12">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost md:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a class="text-hockey-primary">Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Pages</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <a class="text-4xl font-extrabold"
+              >Hockey<span class="text-hockey-primary">’</span>s</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a class="text-hockey-primary">Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Pages</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a
+              class="btn ml-3 bg-hockey-primary py-4 px-6 text-white font-medium"
+              >Get Ticket</a
+            >
+          </div>
+        </div>
+      </nav>
+      <div class="lg:relative bg-base-100 my-12 mx-6">
+        <div class="carousel w-full">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="./Images/1.png" class="w-full max-h-[550px]" />
+            <div
+              class="absolute block bottom-5 gap-4 text-center w-full left-0 lg:left-5 lg:flex"
+            >
+              <a
+                href="#slide4"
+                class="btn btn-circle bg-[#131318] text-[#FFFFFF] border-0"
+                ><i class="fa-solid fa-chevron-left"></i
+              ></a>
+              <a
+                href="#slide2"
+                class="btn btn-circle bg-[#131318] text-[#FFFFFF] border-0"
+                ><i class="fa-solid fa-chevron-right"></i
+              ></a>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="./Images/2.png" class="w-full max-h-[550px]" />
+            <div
+              class="absolute block bottom-5 gap-4 text-center lg:flex w-full left-0 lg:left-5"
+            >
+              <a
+                href="#slide1"
+                class="btn btn-circle bg-[#131318] text-[#FFFFFF] border-0"
+                ><i class="fa-solid fa-chevron-left"></i
+              ></a>
+              <a
+                href="#slide3"
+                class="btn btn-circle bg-[#131318] text-[#FFFFFF] border-0"
+                ><i class="fa-solid fa-chevron-right"></i
+              ></a>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="./Images/3.png" class="w-full max-h-[550px]" />
+            <div
+              class="absolute block bottom-5 gap-4 text-center lg:flex w-full left-0 lg:left-5"
+            >
+              <a
+                href="#slide2"
+                class="btn btn-circle bg-[#131318] text-[#FFFFFF] border-0"
+                ><i class="fa-solid fa-chevron-left"></i
+              ></a>
+              <a
+                href="#slide4"
+                class="btn btn-circle bg-[#131318] text-[#FFFFFF] border-0"
+                ><i class="fa-solid fa-chevron-right"></i
+              ></a>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="./Images/4.png" class="w-full max-h-[550px]" />
+            <div
+              class="absolute block bottom-5 gap-4 text-center lg:flex w-full left-0 lg:left-5"
+            >
+              <a
+                href="#slide3"
+                class="btn btn-circle bg-[#131318] text-[#FFFFFF] border-0"
+                ><i class="fa-solid fa-chevron-left"></i
+              ></a>
+              <a
+                href="#slide1"
+                class="btn btn-circle bg-[#131318] text-[#FFFFFF] border-0"
+                ><i class="fa-solid fa-chevron-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-5 lg:mt-0 p-4 lg:p-8 bg-[#131318] rounded-2xl lg:absolute lg:right-8 lg:bottom-8 lg:max-w-[500px]"
+        >
+          <h1 class="text-2xl text-white font-extrabold">
+            Meet all the heroes from the field
+          </h1>
+          <p class="text-[#ffffff99] font-medium mt-4">
+            The Edmonton Oilers signed forward Corey Perry to a one-year deal.
+            The 38-year-old joins the club after having his previous contract
+            terminated by Chicago earlier this season.
+          </p>
+        </div>
+      </div>
+    </header>
     <main></main>
     <footer></footer>
   </body>
